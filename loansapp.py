@@ -15,6 +15,7 @@ def isEligibleForLoan(loan_application):
      data = scalar.transform([[4500,3000]])
      p1 =data[0,0];
      p2 = data[0,1];
+    
      with open('logistic_loan.pkl','rb') as f:
        loans_model = pickle.load(f)
        pridiction_result =loans_model.predict([[1,1,1,1,p1,p2,1,2]])  
